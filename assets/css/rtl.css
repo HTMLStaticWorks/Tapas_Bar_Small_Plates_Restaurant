@@ -49,7 +49,6 @@ html[dir="rtl"] .back-to-top { right: auto; left: var(--space-4); }
 
 /* ------------------------------------------------------------------ Cards */
 html[dir="rtl"] .price-chip { right: auto; left: var(--space-2); }
-html[dir="rtl"] .share-item::after { right: auto; left: var(--space-2); content: '\2196'; }
 
 /* ---------------------------------------------------------------- Marquee */
 html[dir="rtl"] .marquee-track { animation-direction: reverse; }

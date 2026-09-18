@@ -250,6 +250,9 @@ p { text-wrap: pretty; }
 section { padding-block: var(--space-12); position: relative; }
 section.tight { padding-block: var(--space-8); }
 section.flush-top { padding-block-start: 0; }
+/* Like .flush-top, but keeps a small gap so a card does not butt against the
+   tinted page-head band directly above it. */
+section.tight-top { padding-block-start: var(--space-6); }
 
 section.page-head, .page-head { padding-block-start: calc(var(--nav-h) + var(--space-8)); }
 
@@ -433,6 +436,29 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
   color: #FFF;
 }
 
+/* The link pill itself: its translucent light background disappears against a
+   dark photo, so swap it for a dark scrim with white labels. */
+.nav-over-dark .navbar:not(.scrolled) .nav-links {
+  background: rgba(20, 16, 13, 0.45);
+  border-color: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+}
+
+.nav-over-dark .navbar:not(.scrolled) .nav-links a {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.nav-over-dark .navbar:not(.scrolled) .nav-links a:hover {
+  color: #FFF;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.nav-over-dark .navbar:not(.scrolled) .nav-links a.active {
+  color: #14100D;
+  background: #FBF8F3;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -570,7 +596,7 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
 .drawer-nav {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 .drawer-nav a {
@@ -600,9 +626,11 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
 .drawer-nav a:hover::after { opacity: 1; transform: translateX(0); }
 .drawer-nav a.active { color: var(--accent); }
 
-.drawer-actions { margin-top: auto; display: flex; flex-direction: column; gap: var(--space-2); }
+/* The reserve button follows the last nav link directly, with the theme and
+   direction toggles closing the drawer underneath it. */
+.drawer-actions { display: flex; flex-direction: column; gap: var(--space-2); }
 .drawer-actions .btn { width: 100%; }
-.drawer-toggles { display: flex; gap: 0.5rem; margin-bottom: var(--space-3); }
+.drawer-toggles { display: flex; gap: 0.5rem; margin-top: var(--space-3); }
 
 /* --------------------------------------------------------------------------
    8. Buttons
@@ -962,36 +990,62 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
   50%      { transform: scaleY(1);   transform-origin: top; opacity: 1; }
 }
 
-/* Split hero (home2) */
+/* Split hero (home2): the photo and the copy share one grid cell at every
+   width, so the copy always reads as an overlay on the image rather than as a
+   panel beside or below it. */
 .split-hero {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   min-height: 100vh;
   min-height: 100svh;
   align-items: stretch;
 }
 
+.split-hero-copy,
+.split-hero-media { grid-area: 1 / 1; }
+
 .split-hero-copy {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: calc(var(--nav-h) + var(--space-6)) clamp(1.5rem, 5vw, 5rem) var(--space-8);
-  background: var(--bg);
+  color: #FFF;
+  background: linear-gradient(to bottom, rgba(10, 8, 6, 0.55), rgba(10, 8, 6, 0.86));
 }
 
 /* The full-width children above stop align-items from centring the eyebrow,
    and text-align can't reach it either since it is itself a flex container. */
 .split-hero-copy > * { width: 100%; }
 .split-hero-copy .eyebrow { justify-content: center; }
-.split-hero-copy h1 { margin-bottom: var(--space-3); }
+.split-hero-copy h1 { margin-bottom: var(--space-3); color: #FFF; }
 .split-hero-copy .lede { max-width: 48ch; margin-inline: auto; }
 
-.split-hero-media { position: relative; overflow: hidden; min-height: 440px; }
+.split-hero-copy .lede,
+.split-hero-copy .stat span { color: rgba(255, 255, 255, 0.76); }
+
+.split-hero-copy .btn-outline {
+  color: #FFF;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.split-hero-copy .btn-outline:hover {
+  background: #FFF;
+  color: #14100D;
+  border-color: #FFF;
+}
+
+.split-hero-media { position: relative; overflow: hidden; min-height: 0; }
 .split-hero-media img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Anchored to the photo, which the copy now covers at every width, so it is
+   kept out of the layout. */
 .floating-quote {
+  display: none;
   position: absolute;
   bottom: var(--space-4);
   left: var(--space-4);
@@ -1003,7 +1057,6 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
   padding: var(--space-3);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  display: flex;
   align-items: center;
   gap: var(--space-2);
 }
@@ -1108,23 +1161,6 @@ html[dir="rtl"] .scroll-progress { transform-origin: 100% 50%; }
 .share-overlay h4 { color: #FFF; font-size: 1.15rem; margin-bottom: 0.15rem; }
 .share-overlay p { font-size: 0.82rem; color: rgba(255,255,255,0.72); font-weight: 300; }
 
-.share-item::after {
-  content: '\2197';
-  position: absolute;
-  top: var(--space-2); right: var(--space-2);
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.25);
-  color: #FFF;
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: var(--transition);
-}
-
-.share-item:hover::after { opacity: 1; transform: translateY(0); }
 .share-item:hover img { transform: scale(1.06); }
 
 /* --------------------------------------------------------------------------
@@ -1533,6 +1569,10 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .menu-jump-nav .container {
   display: flex;
   gap: 0.5rem;
+  /* Centred on tablet and desktop, where the six chips fit on one line.
+     'safe center' keeps the first chip reachable if they ever overflow. */
+  justify-content: center;
+  justify-content: safe center;
   overflow-x: auto;
   scrollbar-width: none;
 }
@@ -1936,8 +1976,6 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   .nav-links, .nav-actions { display: none; }
   .hamburger { display: inline-flex; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .split-hero { grid-template-columns: 1fr; min-height: auto; }
-  .split-hero-media { min-height: 60vh; order: -1; }
   .grid-2 { grid-template-columns: 1fr; }
 }
 
@@ -1945,6 +1983,14 @@ textarea.form-control { resize: vertical; min-height: 120px; }
    breakpoint longer than the defaults above, so these must win over the
    stacking rules. */
 @media (max-width: 1024px) {
+  /* Tablet and small laptop: the hero is tall relative to its content, so the
+     bottom-anchored desktop layout leaves it stranded near the fold. Centre it
+     vertically, with matched block padding so the box centres optically too. */
+  .hero {
+    align-items: center;
+    padding-block: calc(var(--nav-h) + var(--space-4));
+  }
+
   .story-grid { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
   .feature-split { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr 1fr; gap: var(--space-4); }
@@ -1961,26 +2007,11 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   .menu-grid { grid-template-columns: 1fr; gap: var(--space-2); }
   .menu-item-media { width: 76px; height: 76px; flex-basis: 76px; border-radius: 14px; }
   .menu-item { gap: var(--space-2); }
-  .hero { align-items: flex-end; }
   .hero-content h1 { max-width: 100%; }
   .scroll-cue { display: none; }
   .hero-meta { gap: var(--space-3); }
   .hero-meta div { min-width: 90px; }
   .hero-meta strong { font-size: 1.25rem; }
-  /* Badge drops out of the image and sits under it rather than covering the
-     photo on a narrow screen. */
-  .split-hero-media {
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-  }
-  .split-hero-media img { height: 52vh; }
-  .floating-quote {
-    position: static;
-    max-width: none;
-    margin: var(--space-2) clamp(1.5rem, 5vw, 5rem) 0;
-  }
 }
 
 /* Tablet keeps the four columns paired 2x2; only phones stack them one by
