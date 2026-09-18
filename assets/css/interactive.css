@@ -678,11 +678,12 @@ mark.hit { background: var(--gold-wash); color: inherit; border-radius: 3px; pad
   font-weight: 500;
 }
 
-.option-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.75rem; }
+.option-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.75rem; align-items: stretch; }
 
 .option-card {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: var(--space-3);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -708,7 +709,10 @@ mark.hit { background: var(--gold-wash); color: inherit; border-radius: 3px; pad
 
 .option-card .p {
   display: block;
-  margin-top: 0.6rem;
+  /* cards stretch to the tallest in the row, so pushing the price down keeps
+     every price line level however long a description runs */
+  margin-top: auto;
+  padding-top: 0.6rem;
   font-size: 0.8rem;
   color: var(--gold);
   letter-spacing: 0.06em;

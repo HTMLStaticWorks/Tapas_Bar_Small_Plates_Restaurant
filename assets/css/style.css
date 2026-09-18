@@ -1588,6 +1588,8 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   scroll-margin-top: calc(var(--nav-h) + 90px);
 }
 
+.menu-category:last-child { margin-bottom: 0; }
+
 .menu-category-title {
   display: flex;
   align-items: baseline;
@@ -1669,7 +1671,20 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   white-space: nowrap;
 }
 
-.menu-item-desc { color: var(--ink-2); font-size: 0.92rem; margin-bottom: 0.5rem; }
+/* two lines are reserved so the tag row lines up across a grid row, however
+   long each description runs */
+.menu-item-desc {
+  color: var(--ink-2);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  min-height: 3.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* single-column below this width, so the reserved line is just dead space */
+@media (max-width: 768px) {
+  .menu-item-desc { min-height: 0; }
+}
 
 .dietary-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 
