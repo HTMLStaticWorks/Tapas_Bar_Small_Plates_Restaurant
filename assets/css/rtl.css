@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Bites & Beats — RTL overrides
+   Logical properties cover most of the layout; this file fixes the places
+   that still rely on physical direction (absolute positioning, slide-ins).
+   ========================================================================== */
+
+html[dir="rtl"], .rtl { direction: rtl; }
+
+/* ------------------------------------------------------------------ Drawer */
+html[dir="rtl"] .drawer {
+  right: auto;
+  left: -100%;
+  border-left: 0;
+  border-right: 1px solid var(--line);
+  transition: left 0.5s var(--ease);
+}
+
+html[dir="rtl"] .drawer.active { left: 0; right: auto; }
+html[dir="rtl"] .drawer-nav a::after { content: '\2190'; }
+html[dir="rtl"] .drawer-nav a:hover { padding-left: 0; padding-right: 0.4rem; }
+
+/* --------------------------------------------------------------- Typography */
+html[dir="rtl"] .footer-col,
+html[dir="rtl"] .menu-category-title,
+html[dir="rtl"] .form-group,
+html[dir="rtl"] .form-success-message,
+html[dir="rtl"] .section-header.left { text-align: right; }
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .footer-col { text-align: center; }
+}
+
+/* ------------------------------------------------------------------- Hero */
+html[dir="rtl"] .hero-overlay {
+  background:
+    radial-gradient(120% 90% at 88% 100%, rgba(209, 68, 27, 0.38) 0%, transparent 55%),
+    linear-gradient(to top, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.55) 42%, rgba(10,8,6,0.3) 100%);
+}
+
+html[dir="rtl"] .scroll-cue { right: auto; left: var(--space-4); }
+html[dir="rtl"] .floating-quote { left: var(--space-4); right: var(--space-4); }
+
+/* ------------------------------------------------------------- Back to top */
+html[dir="rtl"] .back-to-top { right: auto; left: var(--space-4); }
+
+@media (max-width: 640px) {
+  html[dir="rtl"] .back-to-top { right: auto; left: var(--space-2); }
+}
+
+/* ------------------------------------------------------------------ Cards */
+html[dir="rtl"] .price-chip { right: auto; left: var(--space-2); }
+html[dir="rtl"] .share-item::after { right: auto; left: var(--space-2); content: '\2196'; }
+
+/* ---------------------------------------------------------------- Marquee */
+html[dir="rtl"] .marquee-track { animation-direction: reverse; }
+
+/* ------------------------------------------------------------------ Forms */
+html[dir="rtl"] select.form-control {
+  background-position: left 1rem center;
+  padding-right: 1rem;
+  padding-left: 2.5rem;
+}
+
+html[dir="rtl"] .filter-search i { left: auto; right: 1rem; }
+html[dir="rtl"] .filter-search input { padding-left: 1rem; padding-right: 2.75rem; }
+html[dir="rtl"] .filter-clear { right: auto; left: 0.5rem; }
+
+/* ------------------------------------------------------------- Interactive */
+html[dir="rtl"] .night-clock { left: auto; right: var(--space-3); }
+html[dir="rtl"] .guest-readout .note,
+html[dir="rtl"] .night-crowd .val,
+html[dir="rtl"] .board-total .per,
+html[dir="rtl"] .estimate .per { text-align: left; }
+
+html[dir="rtl"] .btn-ghost:hover i { transform: translateX(-4px); }

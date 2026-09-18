@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Bites &amp; Beats</title>
+  <meta name="description" content="Hot and cold tapas, charcuterie, pintxos, desserts and cocktails. Filter the whole menu by diet, heat and price.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Page head -->
+    <section class="container page-head tight head-band menu-head">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Kitchen &amp; bar</span>
+        <h1>The Menu</h1>
+        <p>Everything here is built to be shared. Two or three plates a person, then order again when you realise that wasn't enough.</p>
+      </div>
+    </section>
+
+    <!-- ================================================== Sticky category nav -->
+    <div class="menu-jump-nav">
+      <div class="container">
+        <a href="#cold-tapas" class="active">Cold Tapas</a>
+        <a href="#hot-tapas">Hot Tapas</a>
+        <a href="#charcuterie">Charcuterie</a>
+        <a href="#pintxos">Pintxos</a>
+        <a href="#sweet">Sweet</a>
+        <a href="#cocktails">Sangria &amp; Cocktails</a>
+      </div>
+    </div>
+
+    <section class="container" style="padding-top: var(--space-6);">
+
+      <!-- ============================================ INTERACTIVE: Filter -->
+      <div class="menu-filter animate-on-scroll" id="menu-filter">
+        <div class="filter-row">
+          <div class="filter-search">
+            <i class="ph ph-magnifying-glass"></i>
+            <label for="menu-search" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Search the menu</label>
+            <input type="search" id="menu-search" class="form-control" placeholder="Search dishes, ingredients&hellip;" autocomplete="off">
+            <button type="button" class="filter-clear" id="menu-search-clear" aria-label="Clear search"><i class="ph ph-x"></i></button>
+          </div>
+
+          <div class="filter-chips">
+            <button type="button" class="chip" data-filter="v"><i class="ph ph-plant"></i> Vegetarian</button>
+            <button type="button" class="chip" data-filter="gf"><i class="ph ph-grains-slash"></i> Gluten-free</button>
+            <button type="button" class="chip" data-filter="spicy"><i class="ph ph-fire"></i> Spicy</button>
+            <button type="button" class="chip" data-filter="chef"><i class="ph ph-chef-hat"></i> Chef's pick</button>
+            <button type="button" class="chip" data-filter="budget"><i class="ph ph-tag"></i> Under $15</button>
+          </div>
+        </div>
+
+        <div class="filter-meta">
+          <span><strong id="menu-count">0</strong> dishes match &mdash; V = vegetarian, GF = gluten-free</span>
+          <button type="button" class="filter-reset" id="menu-reset" style="visibility: hidden;">Clear all filters</button>
+        </div>
+      </div>
+
+      <div class="menu-empty" id="menu-empty">
+        <i class="ph ph-cooking-pot"></i>
+        <h3 class="mb-2">Nothing matches that</h3>
+        <p>Try a different search, or clear a filter or two. If you're after something specific, the kitchen will usually oblige &mdash; just ask.</p>
+      </div>
+
+      <!-- ============================================ Cold Tapas -->
+      <section id="cold-tapas" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Cold Tapas <span class="menu-category-count">4 of 4</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="v gf" data-price="8">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1622341357069-6144b45b75b6?auto=format&fit=crop&q=80&w=320" alt="Bowl of marinated olives" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Marinated Olives</span>
+                <span class="menu-item-price">$8</span>
+              </div>
+              <p class="menu-item-desc">Citrus zest, rosemary, a hit of chilli flake</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="12">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1629978444632-9f63ba0eff47?auto=format&fit=crop&q=80&w=320" alt="Chilled tomato gazpacho" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Heirloom Tomato Gazpacho</span>
+                <span class="menu-item-price">$12</span>
+              </div>
+              <p class="menu-item-desc">Cucumber, sherry vinegar, Arbequina olive oil</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="" data-price="18">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1722012988794-196d72bd12aa?auto=format&fit=crop&q=80&w=320" alt="Tuna tartare with avocado" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Tuna Tartare</span>
+                <span class="menu-item-price">$18</span>
+              </div>
+              <p class="menu-item-desc">Avocado, soy-lime dressing, sesame crisp</p>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf" data-price="11">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1560174122-cac0c0bdacc6?auto=format&fit=crop&q=80&w=320" alt="White anchovies on a plate" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Boquerones en Vinagre</span>
+                <span class="menu-item-price">$11</span>
+              </div>
+              <p class="menu-item-desc">White anchovies, garlic, parsley, good bread</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================ Hot Tapas -->
+      <section id="hot-tapas" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Hot Tapas <span class="menu-category-count">6 of 6</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="gf spicy chef" data-price="16">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?auto=format&fit=crop&q=80&w=320" alt="Garlic prawns sizzling in a pan" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Gambas al Ajillo</span>
+                <span class="menu-item-price">$16</span>
+              </div>
+              <p class="menu-item-desc">Sizzling garlic prawns, chilli, white wine</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag spicy">Spicy</span><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf chef" data-price="22">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1583180527676-8dbfe98c2c87?auto=format&fit=crop&q=80&w=320" alt="Charred octopus" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Charred Octopus</span>
+                <span class="menu-item-price">$22</span>
+              </div>
+              <p class="menu-item-desc">Smoked paprika, crushed potatoes, lemon</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="" data-price="14">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1682264895449-f75b342cbab6?auto=format&fit=crop&q=80&w=320" alt="Crispy fried calamari" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Crispy Calamari</span>
+                <span class="menu-item-price">$14</span>
+              </div>
+              <p class="menu-item-desc">Lemon pepper crust, saffron aioli</p>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf spicy" data-price="14">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1542901031-ec5eeb518e83?auto=format&fit=crop&q=80&w=320" alt="Chorizo braised in red wine" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Chorizo al Vino</span>
+                <span class="menu-item-price">$14</span>
+              </div>
+              <p class="menu-item-desc">Braised in red wine, honey, bay leaf</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag spicy">Spicy</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="9">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1788843303650-2e29d202b667?auto=format&fit=crop&q=80&w=320" alt="Blistered padron peppers" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Blistered Padr&oacute;n Peppers</span>
+                <span class="menu-item-price">$9</span>
+              </div>
+              <p class="menu-item-desc">Sea salt, olive oil. One in ten fights back</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="" data-price="11">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1778104683130-8ad6521db445?auto=format&fit=crop&q=80&w=320" alt="Golden fried croquetas" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Jam&oacute;n Croquetas</span>
+                <span class="menu-item-price">$11</span>
+              </div>
+              <p class="menu-item-desc">B&eacute;chamel, cured ham, breadcrumb shell</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================ Charcuterie -->
+      <section id="charcuterie" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Charcuterie &amp; Cheese <span class="menu-category-count">4 of 4</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="chef" data-price="28">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1780639026821-f680fae0d99d?auto=format&fit=crop&q=80&w=320" alt="Iberico jamon carved thin" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Ib&eacute;rico Jam&oacute;n de Bellota</span>
+                <span class="menu-item-price">$28</span>
+              </div>
+              <p class="menu-item-desc">Aged 36 months, carved to order, tomato bread</p>
+              <div class="dietary-tags"><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="12">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1707037491809-f8ccfed4704e?auto=format&fit=crop&q=80&w=320" alt="Wedge of manchego cheese" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Manchego Curado</span>
+                <span class="menu-item-price">$12</span>
+              </div>
+              <p class="menu-item-desc">Sheep's milk cheese, quince paste, marcona almonds</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="14">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1645291787337-ede99d8e2b66?auto=format&fit=crop&q=80&w=320" alt="Wedge of blue cheese with toasted nuts" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Cabrales con Miel</span>
+                <span class="menu-item-price">$14</span>
+              </div>
+              <p class="menu-item-desc">Asturian blue, lavender honey, toasted nuts</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="" data-price="45">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1678572823447-45fc146df43c?auto=format&fit=crop&q=80&w=320" alt="Charcuterie and cheese board" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">The Grand Board</span>
+                <span class="menu-item-price">$45</span>
+              </div>
+              <p class="menu-item-desc">Three meats, three cheeses, everything that goes with them</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================ Pintxos -->
+      <section id="pintxos" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Pintxos <span class="menu-category-count">4 of 4</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="v" data-price="6">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1634234498278-b01fbf12bf4c?auto=format&fit=crop&q=80&w=320" alt="Goat cheese and honey on toast" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Goat Cheese &amp; Honey</span>
+                <span class="menu-item-price">$6 / pc</span>
+              </div>
+              <p class="menu-item-desc">Walnut dust on toasted baguette</p>
+              <div class="dietary-tags"><span class="tag v">V</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v chef" data-price="7">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1617307715850-c6965f2aead4?auto=format&fit=crop&q=80&w=320" alt="Wild mushroom toast" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Wild Mushroom</span>
+                <span class="menu-item-price">$7 / pc</span>
+              </div>
+              <p class="menu-item-desc">Truffle aioli, parsley, cracked pepper</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf spicy" data-price="5">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1737681159526-0561967bd0e5?auto=format&fit=crop&q=80&w=320" alt="Olive and anchovy skewers" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Gilda</span>
+                <span class="menu-item-price">$5 / pc</span>
+              </div>
+              <p class="menu-item-desc">Anchovy, olive, guindilla pepper. The original pintxo</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag spicy">Spicy</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="6">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1649354018857-c4ca215c88c5?auto=format&fit=crop&q=80&w=320" alt="Spanish potato tortilla" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Tortilla Espa&ntilde;ola</span>
+                <span class="menu-item-price">$6 / pc</span>
+              </div>
+              <p class="menu-item-desc">Slow-cooked potato and onion, still a little soft inside</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================ Sweet -->
+      <section id="sweet" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Sweet <span class="menu-category-count">4 of 4</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="v chef" data-price="11">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1635327173758-85badf17f995?auto=format&fit=crop&q=80&w=320" alt="Basque burnt cheesecake" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Basque Burnt Cheesecake</span>
+                <span class="menu-item-price">$11</span>
+              </div>
+              <p class="menu-item-desc">Scorched top, barely set middle, sherry caramel</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v" data-price="10">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1624371414361-e670edf4898d?auto=format&fit=crop&q=80&w=320" alt="Churros with chocolate" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Churros &amp; Chocolate</span>
+                <span class="menu-item-price">$10</span>
+              </div>
+              <p class="menu-item-desc">Cinnamon sugar, thick drinking chocolate for dipping</p>
+              <div class="dietary-tags"><span class="tag v">V</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="9">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1676300184943-09b2a08319a3?auto=format&fit=crop&q=80&w=320" alt="Crema catalana under burnt sugar" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Crema Catalana</span>
+                <span class="menu-item-price">$9</span>
+              </div>
+              <p class="menu-item-desc">Orange and cinnamon custard under burnt sugar</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v" data-price="10">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1709632238697-43f4e4f1f98f?auto=format&fit=crop&q=80&w=320" alt="Almond cake dusted with icing sugar" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Tarta de Santiago</span>
+                <span class="menu-item-price">$10</span>
+              </div>
+              <p class="menu-item-desc">Galician almond cake, icing sugar, a glass of moscatel</p>
+              <div class="dietary-tags"><span class="tag v">V</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================ Cocktails -->
+      <section id="cocktails" class="menu-category animate-on-scroll">
+        <h2 class="menu-category-title text-accent">Sangria &amp; Cocktails <span class="menu-category-count">6 of 6</span></h2>
+        <div class="menu-grid">
+
+          <div class="menu-item" data-tags="v gf" data-price="12">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1781448714111-5f5850b0f753?auto=format&fit=crop&q=80&w=320" alt="Pitcher of red sangria" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Classic Red Sangria</span>
+                <span class="menu-item-price">$12 / $40</span>
+              </div>
+              <p class="menu-item-desc">Tempranillo, brandy, orange, apple. Glass or pitcher</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf chef" data-price="14">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1626810309605-1d6a85e7375d?auto=format&fit=crop&q=80&w=320" alt="Citrus sangria with prosecco" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Citrus Sunset Sangria</span>
+                <span class="menu-item-price">$14 / $45</span>
+              </div>
+              <p class="menu-item-desc">Prosecco, blood orange, peach liqueur</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span><span class="tag chef">Chef's pick</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf spicy" data-price="16">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1634003311194-152e30e732f7?auto=format&fit=crop&q=80&w=320" alt="Smoked rosemary margarita" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Smoked Rosemary Margarita</span>
+                <span class="menu-item-price">$16</span>
+              </div>
+              <p class="menu-item-desc">Mezcal, lime, agave, charred rosemary</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag spicy">Spicy</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="15">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1573624658129-3f7856192f19?auto=format&fit=crop&q=80&w=320" alt="Gin and tonic with cucumber" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Tapas Tonic</span>
+                <span class="menu-item-price">$15</span>
+              </div>
+              <p class="menu-item-desc">Gin, elderflower, cucumber, Fever-Tree tonic</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="gf" data-price="18">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&q=80&w=320" alt="Three glasses of sherry" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Sherry Flight</span>
+                <span class="menu-item-price">$18</span>
+              </div>
+              <p class="menu-item-desc">Fino, amontillado, oloroso. Three glasses, one lesson</p>
+              <div class="dietary-tags"><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+          <div class="menu-item" data-tags="v gf" data-price="9">
+            <img class="menu-item-media" src="https://images.unsplash.com/photo-1781229851767-82d888cc73b2?auto=format&fit=crop&q=80&w=320" alt="Red vermouth over ice with orange" loading="lazy" width="320" height="320">
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <span class="menu-item-title">Vermut de Grifo</span>
+                <span class="menu-item-price">$9</span>
+              </div>
+              <p class="menu-item-desc">Red vermouth on tap, over ice, orange wheel and an olive</p>
+              <div class="dietary-tags"><span class="tag v">V</span><span class="tag gf">GF</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ================================================== CTA -->
+    <section class="cta-band">
+      <div class="container animate-on-scroll">
+        <span class="eyebrow centered" style="color: rgba(255,255,255,0.8);">Hungry yet</span>
+        <h2>Get a table before the menu changes</h2>
+        <p class="mb-4" style="font-size: 1.15rem;">The specials board shifts weekly. The octopus, thankfully, never does.</p>
+        <a href="reservations.html" class="btn btn-light"><i class="ph ph-calendar-check"></i> Reserve a table</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

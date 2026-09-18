@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | Bites &amp; Beats</title>
+  <meta name="description" content="Book a table at Bites &amp; Beats. Tables for one to six; larger groups go through private dining.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Page head -->
+    <section class="container page-head tight head-band">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Reservations</span>
+        <h1>Reserve your spot</h1>
+        <p>Tables for one to six. Anything larger and you're in private dining territory &mdash; which is more fun anyway.</p>
+      </div>
+    </section>
+
+    <!-- ================================================== Form -->
+    <section class="container flush-top">
+      <div class="card static animate-on-scroll" style="max-width: 860px; margin: 0 auto;">
+
+        <div class="handoff-note" id="flight-handoff">
+          <i class="ph-fill ph-confetti"></i>
+          <span>Your tapas flight came with you &mdash; we've added it to the notes below. Change anything you like.</span>
+        </div>
+
+        <form action="https://formspree.io/f/placeholder" method="POST" class="validate-form" novalidate>
+          <div class="res-form-grid">
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Jane Doe">
+              <span class="error-message">Please enter your full name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="jane@example.com">
+              <span class="error-message">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="(123) 456-7890">
+              <span class="error-message">Please enter a valid phone number.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="partySize">Party Size *</label>
+              <select id="partySize" name="partySize" class="form-control" required>
+                <option value="" disabled selected>Select party size</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7+">7 or more &mdash; see private dining</option>
+              </select>
+              <span class="error-message">Please select your party size.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date *</label>
+              <input type="date" id="date" name="date" class="form-control" required>
+              <span class="error-message">Please select a date.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Time *</label>
+              <select id="time" name="time" class="form-control" required>
+                <option value="" disabled selected>Select time</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="17:30">5:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+                <option value="21:00">9:00 PM</option>
+                <option value="21:30">9:30 PM</option>
+                <option value="22:00">10:00 PM</option>
+              </select>
+              <span class="error-message">Please select a time.</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="requests">Notes for the kitchen (optional)</label>
+              <textarea id="requests" name="requests" class="form-control" rows="4" placeholder="Allergies, celebrations, the plates you already have your eye on&hellip;"></textarea>
+            </div>
+
+          </div>
+
+          <div class="form-success-message">
+            <i class="ph-fill ph-check-circle"></i>
+            Table request sent. We'll confirm by email shortly.
+          </div>
+
+          <div class="mt-4 text-center">
+            <button type="submit" class="btn btn-primary btn-block" style="max-width: 320px;">Request reservation <i class="ph ph-arrow-right"></i></button>
+          </div>
+
+          <p class="mt-4 text-muted" style="font-size: 0.88rem;">
+            Parties of seven or more, head to <a href="events.html" class="text-accent">Events &amp; Private Dining</a>. Walk-ins are always welcome at the bar.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================================================== Good to know -->
+    <section class="container flush-top">
+      <div class="grid-3 animate-on-scroll" data-stagger style="max-width: 860px; margin: 0 auto;">
+        <div class="card flat">
+          <div class="info-row" style="border: 0; padding: 0;">
+            <span class="ico"><i class="ph-fill ph-clock"></i></span>
+            <div>
+              <h4>Held for 15 minutes</h4>
+              <p>Running late? Call us and we'll hold it longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card flat">
+          <div class="info-row" style="border: 0; padding: 0;">
+            <span class="ico"><i class="ph-fill ph-armchair"></i></span>
+            <div>
+              <h4>Bar is walk-in</h4>
+              <p>Twelve stools, first come. Usually worth the wait.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card flat">
+          <div class="info-row" style="border: 0; padding: 0;">
+            <span class="ico"><i class="ph-fill ph-leaf"></i></span>
+            <div>
+              <h4>Allergies handled</h4>
+              <p>Tell us in the notes and the kitchen will adapt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== FAQ -->
+    <section class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Before you book</span>
+        <h2>Questions, answered</h2>
+        <p>The four we get asked most. Anything else, the phone is always quicker.</p>
+      </div>
+
+      <div class="faq animate-on-scroll" id="faq" data-stagger style="max-width: 860px; margin: 0 auto;">
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-q" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+              <span>How far ahead should I book?</span>
+              <i class="ph ph-plus" aria-hidden="true"></i>
+            </button>
+          </h3>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <div><p>Two to three weeks for a Friday or Saturday, a few days midweek. We release a handful of tables at 10AM each morning, so it is always worth checking again on the day.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-q" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+              <span>Can you handle allergies and dietary needs?</span>
+              <i class="ph ph-plus" aria-hidden="true"></i>
+            </button>
+          </h3>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <div><p>Yes. Put the details in the notes box above and the kitchen will plan around them before you arrive. Most of the menu can be made gluten-free, and there is a full vegetarian flight on request.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-q" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+              <span>What happens if we are running late?</span>
+              <i class="ph ph-plus" aria-hidden="true"></i>
+            </button>
+          </h3>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <div><p>We hold your table for 15 minutes. Call us on <a href="tel:+11234567890" class="text-accent">(123) 456-7890</a> and we will hold it longer where the night allows &mdash; and there is always room at the standing rail in the meantime.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <button type="button" class="faq-q" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+              <span>Is there a charge to cancel?</span>
+              <i class="ph ph-plus" aria-hidden="true"></i>
+            </button>
+          </h3>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <div><p>No charge for tables of six or fewer &mdash; just let us know by 3PM on the day. Private dining and buyouts carry a deposit, which is set out in your booking confirmation.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

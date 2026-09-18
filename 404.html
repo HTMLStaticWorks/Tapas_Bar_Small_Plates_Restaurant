@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Bites &amp; Beats</title>
+  <meta name="description" content="That page isn't on the menu. Head back to the dining room.">
+  <meta name="robots" content="noindex">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-head" style="min-height: 70vh; display: flex; align-items: center; justify-content: center;">
+      <div class="text-center animate-on-scroll" style="max-width: 640px;">
+        <div style="font-family: var(--font-display); font-size: clamp(7rem, 20vw, 14rem); font-weight: 500; letter-spacing: -0.06em; line-height: 0.85; color: var(--accent); margin-bottom: var(--space-4);">
+          404
+        </div>
+        <span class="eyebrow centered">Empty plate</span>
+        <h1 class="mb-4" style="font-size: clamp(2rem, 4.5vw, 3.2rem);">This one never made it out of the kitchen</h1>
+        <p class="lede mb-6" style="margin-inline: auto;">
+          The page you were after has been moved, renamed, or quietly taken off the menu. Happens to the best dishes.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="index.html" class="btn btn-primary"><i class="ph ph-house"></i> Back to the party</a>
+          <a href="menu.html" class="btn btn-outline">Browse the menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Still hungry <i class="ph-fill ph-circle"></i> Try the octopus <i class="ph-fill ph-circle"></i> Or the churros <i class="ph-fill ph-circle"></i> Or just a sherry <i class="ph-fill ph-circle"></i></span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Bites &amp; Beats</title>
+  <meta name="description" content="Bites &amp; Beats opens soon. Join the list and be first through the door.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh;">
+
+  <!-- Floating controls -->
+  <div style="position: fixed; top: var(--space-3); right: var(--space-3); z-index: 10; display: flex; gap: 0.5rem;">
+    <button class="icon-btn theme-toggle" aria-label="Toggle dark mode" style="border-color: rgba(255,255,255,0.3); color: #FFF;">
+      <i class="ph ph-moon"></i>
+    </button>
+    <a href="index.html" class="icon-btn" aria-label="Back to site" style="border-color: rgba(255,255,255,0.3); color: #FFF; text-decoration: none;">
+      <i class="ph ph-arrow-right"></i>
+    </a>
+  </div>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: var(--space-8) 0;">
+
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1920" alt="" class="hero-bg" aria-hidden="true">
+    <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(10,8,6,0.82), rgba(10,8,6,0.96));"></div>
+
+    <div class="container text-center" style="position: relative; z-index: 2; max-width: 680px; color: #FFF;">
+
+      <div class="animate-on-scroll mb-4">
+        <i class="ph-fill ph-martini" style="font-size: 3.2rem; color: var(--accent);"></i>
+      </div>
+
+      <span class="eyebrow centered animate-on-scroll" style="color: var(--gold);">Night City &middot; Opening soon</span>
+
+      <h1 class="reveal-words" style="color: #FFF; margin-inline: auto; margin-bottom: var(--space-3);">Something big is cooking.</h1>
+
+      <p class="animate-on-scroll" style="font-size: 1.15rem; color: rgba(255,255,255,0.78); margin: 0 auto var(--space-6); max-width: 46ch;">
+        A tapas bar built around live fire, cold sherry and a sound system that earns its keep. Doors open shortly.
+      </p>
+
+      <!-- Live countdown -->
+      <div class="countdown animate-on-scroll" data-countdown="2026-12-31T19:00:00">
+        <div class="count-unit"><strong data-unit="days">--</strong><span>Days</span></div>
+        <div class="count-unit"><strong data-unit="hours">--</strong><span>Hours</span></div>
+        <div class="count-unit"><strong data-unit="minutes">--</strong><span>Mins</span></div>
+        <div class="count-unit"><strong data-unit="seconds">--</strong><span>Secs</span></div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="animate-on-scroll" style="margin-top: var(--space-6);">
+        <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: var(--space-3);">Get on the list</h3>
+
+        <!-- Swap the action for your Mailchimp / ConvertKit endpoint -->
+        <form action="#" class="validate-form" style="max-width: 440px; margin: 0 auto;" novalidate>
+          <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+            <div style="flex: 1; text-align: left;">
+              <label for="notify-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Email address</label>
+              <input type="email" id="notify-email" name="email" class="form-control" placeholder="you@example.com" required
+                     style="background: rgba(255,255,255,0.08); color: #FFF; border-color: rgba(255,255,255,0.28); border-radius: var(--radius-pill);">
+              <span class="error-message" style="color: #FFAA9E;">Please enter a valid email.</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Notify me</button>
+          </div>
+
+          <div class="form-success-message" style="background: rgba(111, 191, 139, 0.15); color: #A6DFBB; border-color: rgba(111, 191, 139, 0.45); justify-content: center;">
+            <i class="ph-fill ph-check-circle"></i> You're on the list.
+          </div>
+        </form>
+      </div>
+
+      <p class="animate-on-scroll" style="margin-top: var(--space-6); font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+        123 Vibrant Avenue &middot; Night City, NY &middot; <a href="contact.html" style="color: var(--gold);">Get in touch</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

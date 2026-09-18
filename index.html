@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bites &amp; Beats | Tapas Bar &amp; Small Plates Restaurant</title>
+  <meta name="description"
+    content="A tapas bar in Night City serving Spanish small plates, sangria and late-night sets. Build your own tapas flight and reserve a table.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- Icons (Phosphor) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- SEO JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bites & Beats",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+    "servesCuisine": "Tapas",
+    "priceRange": "$$",
+    "telephone": "+1234567890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Vibrant Avenue",
+      "addressLocality": "Night City",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+
+<body class="nav-over-dark">
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Hero -->
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1920"
+        alt="The dining room at Bites &amp; Beats, full and warmly lit" class="hero-bg">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <span class="eyebrow">Night City &middot; Since 2019</span>
+        <h1 class="reveal-words">Small plates, loud nights.</h1>
+        <p class="animate-on-scroll">Spanish tapas cooked over live fire, sangria by the pitcher and a room that gets
+          louder as the night goes on. Come hungry, stay late.</p>
+
+        <div class="hero-actions animate-on-scroll">
+          <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Book your table</a>
+          <a href="menu.html" class="btn btn-light">See the menu</a>
+        </div>
+
+        <div class="hero-meta animate-on-scroll">
+          <div>
+            <strong><span data-count="42" data-suffix="">0</span></strong>
+            <span>Plates on the menu</span>
+          </div>
+          <div>
+            <strong>5PM&ndash;1AM</strong>
+            <span>Tuesday to Sunday</span>
+          </div>
+          <div>
+            <strong><span data-count="4" data-suffix=".9">0</span></strong>
+            <span>Average rating</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================== Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Charred octopus <i class="ph-fill ph-circle"></i> Gambas al ajillo <i class="ph-fill ph-circle"></i>
+          Ib&eacute;rico de bellota <i class="ph-fill ph-circle"></i> Basque cheesecake <i
+            class="ph-fill ph-circle"></i> Padr&oacute;n peppers <i class="ph-fill ph-circle"></i> Sangria blanca <i
+            class="ph-fill ph-circle"></i></span>
+      </div>
+    </div>
+
+    <!-- ================================================== Signature plates -->
+    <section class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Signatures</span>
+        <h2>The plates people come back for</h2>
+        <p>Four dishes that have never once left the menu &mdash; because the regulars would riot.</p>
+      </div>
+
+      <div class="shareable-grid animate-on-scroll" data-stagger>
+        <article class="share-item">
+          <img src="https://images.unsplash.com/photo-1594973338928-5514e8cbb557?auto=format&fit=crop&q=80&w=700"
+            alt="Charred octopus with smoked paprika" loading="lazy">
+          <div class="share-overlay">
+            <h4>Charred Octopus</h4>
+            <p>Smoked paprika, crushed potatoes, lemon</p>
+          </div>
+        </article>
+        <article class="share-item">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=700"
+            alt="Citrus sangria in a tall glass" loading="lazy">
+          <div class="share-overlay">
+            <h4>Citrus Sunset Sangria</h4>
+            <p>Blood orange, prosecco, peach</p>
+          </div>
+        </article>
+        <article class="share-item">
+          <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=700"
+            alt="Cured meat and cheese board" loading="lazy">
+          <div class="share-overlay">
+            <h4>Ib&eacute;rico Board</h4>
+            <p>Aged 36 months, tomato bread</p>
+          </div>
+        </article>
+        <article class="share-item">
+          <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&q=80&w=700"
+            alt="Pintxos lined up on the bar" loading="lazy">
+          <div class="share-overlay">
+            <h4>Wild Mushroom Pintxos</h4>
+            <p>Truffle aioli, crusty bread</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================================== INTERACTIVE: Flight builder -->
+    <section class="container" id="flight-builder">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Build it yourself</span>
+        <h2>Design your tapas flight</h2>
+        <p>Tap the plates you fancy. We balance the board across five courses, run the numbers, and send the whole list
+          to your reservation.</p>
+      </div>
+
+      <div class="flight animate-on-scroll">
+
+        <!-- Picker -->
+        <div class="flight-picker">
+          <div class="flight-toolbar">
+            <span class="label">Table of</span>
+            <button type="button" class="chip flight-party" data-party="2" aria-pressed="true">2</button>
+            <button type="button" class="chip flight-party" data-party="4" aria-pressed="false">4</button>
+            <button type="button" class="chip flight-party" data-party="6" aria-pressed="false">6</button>
+            <span style="flex:1 1 auto"></span>
+            <button type="button" class="chip" id="flight-surprise"><i class="ph ph-shuffle"></i> Chef&rsquo;s
+              pick</button>
+            <button type="button" class="chip" id="flight-clear"><i class="ph ph-arrow-counter-clockwise"></i>
+              Clear</button>
+          </div>
+
+          <div class="flight-options">
+            <!-- Bites -->
+            <button type="button" class="flight-opt" data-id="bravas" data-name="Patatas Bravas" data-price="10"
+              data-course="bite">
+              <span class="ico"><i class="ph ph-bowl-food"></i></span>
+              <span><span class="name">Patatas Bravas</span><span class="meta">Bite &middot; $10</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="pintxo" data-name="Wild Mushroom Pintxo" data-price="7"
+              data-course="bite">
+              <span class="ico"><i class="ph ph-bread"></i></span>
+              <span><span class="name">Wild Mushroom Pintxo</span><span class="meta">Bite &middot; $7</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="croquetas" data-name="Jam&oacute;n Croquetas"
+              data-price="11" data-course="bite">
+              <span class="ico"><i class="ph ph-cookie"></i></span>
+              <span><span class="name">Jam&oacute;n Croquetas</span><span class="meta">Bite &middot; $11</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+
+            <!-- Sea -->
+            <button type="button" class="flight-opt" data-id="gambas" data-name="Gambas al Ajillo" data-price="16"
+              data-course="sea">
+              <span class="ico c-sea"><i class="ph ph-shrimp"></i></span>
+              <span><span class="name">Gambas al Ajillo</span><span class="meta">Sea &middot; $16</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="octopus" data-name="Charred Octopus" data-price="22"
+              data-course="sea">
+              <span class="ico c-sea"><i class="ph ph-fish"></i></span>
+              <span><span class="name">Charred Octopus</span><span class="meta">Sea &middot; $22</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="tartare" data-name="Tuna Tartare" data-price="18"
+              data-course="sea">
+              <span class="ico c-sea"><i class="ph ph-fish-simple"></i></span>
+              <span><span class="name">Tuna Tartare</span><span class="meta">Sea &middot; $18</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+
+            <!-- Land -->
+            <button type="button" class="flight-opt" data-id="jamon" data-name="Ib&eacute;rico Jam&oacute;n"
+              data-price="28" data-course="land">
+              <span class="ico"><i class="ph ph-fork-knife"></i></span>
+              <span><span class="name">Ib&eacute;rico Jam&oacute;n</span><span class="meta">Land &middot;
+                  $28</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="chorizo" data-name="Chorizo al Vino" data-price="14"
+              data-course="land">
+              <span class="ico"><i class="ph ph-cooking-pot"></i></span>
+              <span><span class="name">Chorizo al Vino</span><span class="meta">Land &middot; $14</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+
+            <!-- Green -->
+            <button type="button" class="flight-opt" data-id="gazpacho" data-name="Heirloom Gazpacho" data-price="12"
+              data-course="green">
+              <span class="ico c-green"><i class="ph ph-plant"></i></span>
+              <span><span class="name">Heirloom Gazpacho</span><span class="meta">Green &middot; $12</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="padron" data-name="Padr&oacute;n Peppers" data-price="9"
+              data-course="green">
+              <span class="ico c-green"><i class="ph ph-pepper"></i></span>
+              <span><span class="name">Padr&oacute;n Peppers</span><span class="meta">Green &middot; $9</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+
+            <!-- Sweet -->
+            <button type="button" class="flight-opt" data-id="cheesecake" data-name="Basque Cheesecake" data-price="11"
+              data-course="sweet">
+              <span class="ico c-sweet"><i class="ph ph-cake"></i></span>
+              <span><span class="name">Basque Cheesecake</span><span class="meta">Sweet &middot; $11</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+            <button type="button" class="flight-opt" data-id="churros" data-name="Churros &amp; Chocolate"
+              data-price="10" data-course="sweet">
+              <span class="ico c-sweet"><i class="ph ph-ice-cream"></i></span>
+              <span><span class="name">Churros &amp; Chocolate</span><span class="meta">Sweet &middot; $10</span></span>
+              <span class="mark"><i class="ph ph-plus"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live board -->
+        <aside class="flight-board" aria-live="polite">
+          <h3>Your board</h3>
+          <p class="sub" id="flight-count">0 plates</p>
+
+          <ul class="board-list" id="flight-list"></ul>
+          <div class="board-empty" id="flight-empty">
+            <i class="ph ph-hand-tap"></i>
+            <span>Tap a plate to start building</span>
+          </div>
+
+          <div class="board-balance">
+            <div class="row"><span>Course balance</span><span>5 courses</span></div>
+            <div class="meter" id="flight-meter"><i></i></div>
+          </div>
+
+          <p class="board-hint" id="flight-hint">Two plates per person is about right.</p>
+
+          <div class="board-total">
+            <div>
+              <span class="k">Estimated</span>
+              <div class="v" id="flight-total">$0</div>
+            </div>
+            <div class="per" id="flight-per">&mdash;</div>
+          </div>
+
+          <div class="board-actions">
+            <a href="reservations.html" class="btn btn-primary" id="flight-send"><i class="ph ph-paper-plane-tilt"></i>
+              Take this to my table</a>
+            <a href="menu.html" class="btn btn-light btn-sm">Browse the full menu</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ================================================== Story -->
+    <section class="band-dark grain">
+      <div class="container">
+        <div class="grid-2 story-grid" style="align-items: center;">
+          <div class="story-copy animate-on-scroll">
+            <span class="eyebrow">Our story</span>
+            <h2>Dinner should sound like something</h2>
+            <p class="mb-4">We opened Bites &amp; Beats because the best meals we'd ever eaten were the loud ones
+              &mdash; a bar in San Sebasti&aacute;n, plates arriving faster than anyone could order them, nobody sitting
+              down.</p>
+            <p class="mb-4">So we built a room with an open fire, a long marble bar and a sound system that earns its
+              keep. The food is serious. The evening isn't.</p>
+            <a href="events.html" class="btn btn-light">Host your own night <i class="ph ph-arrow-right"></i></a>
+          </div>
+
+          <figure class="story-media animate-on-scroll" style="transition-delay: 120ms;">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1000"
+              alt="The open fire and marble bar at Bites &amp; Beats on a busy night" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="stat-row mt-6 animate-on-scroll" style="transition-delay: 200ms;">
+          <div class="stat">
+            <strong data-count="42">0</strong>
+            <span>Plates</span>
+          </div>
+          <div class="stat">
+            <strong data-count="18">0</strong>
+            <span>Sherries poured</span>
+          </div>
+          <div class="stat">
+            <strong data-count="36">0</strong>
+            <span>Months aged jam&oacute;n</span>
+          </div>
+          <div class="stat">
+            <strong data-count="120">0</strong>
+            <span>Seats at capacity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== Reviews -->
+    <section class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Word of mouth</span>
+        <h2>What the room says</h2>
+      </div>
+
+      <div class="grid-3 animate-on-scroll" data-stagger>
+        <article class="card quote-card">
+          <span class="mark">&ldquo;</span>
+          <blockquote>The perfect place to start the night. Somehow also the perfect place to end it.</blockquote>
+          <div class="quote-author">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+              alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+            <cite>Sarah M. &middot; Regular</cite>
+          </div>
+        </article>
+        <article class="card quote-card">
+          <span class="mark">&ldquo;</span>
+          <blockquote>Those mushroom pintxos changed my life. I've brought eleven people here since.</blockquote>
+          <div class="quote-author">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+              alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+            <cite>David K. &middot; Google review</cite>
+          </div>
+        </article>
+        <article class="card quote-card">
+          <span class="mark">&ldquo;</span>
+          <blockquote>Best vibe in the city, and the octopus is quietly one of the best plates in town.</blockquote>
+          <div class="quote-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+              alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+            <cite>Local Times &middot; Critic's pick</cite>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================================== Events teaser -->
+    <section class="container">
+      <div class="feature-split animate-on-scroll">
+        <div class="feature-split-media">
+          <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?auto=format&fit=crop&q=80&w=1000"
+            alt="A private dining space set for a party" loading="lazy">
+        </div>
+        <div class="feature-split-copy">
+          <span class="eyebrow">Private dining</span>
+          <h2>Host your next big night</h2>
+          <p>Birthdays, launch parties, full buyouts. Three spaces, a dedicated service team and a DJ booth that comes
+            with the room.</p>
+          <div>
+            <a href="events.html" class="btn btn-primary">Plan your event <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== CTA -->
+    <section class="cta-band">
+      <div class="container animate-on-scroll">
+        <span class="eyebrow centered" style="color: rgba(255,255,255,0.8);">Tables go fast</span>
+        <h2>Ready to join the party?</h2>
+        <p class="mb-4" style="font-size: 1.15rem;">Friday and Saturday book out about a week ahead. Tuesdays are ours
+          if you want the bar to yourself.</p>
+        <a href="reservations.html" class="btn btn-light"><i class="ph ph-calendar-check"></i> Reserve now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

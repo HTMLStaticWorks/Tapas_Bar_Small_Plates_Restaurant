@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Bites &amp; Beats</title>
+  <meta name="description" content="Find Bites &amp; Beats at 123 Vibrant Avenue, Night City. Opening hours, phone, email and a message form.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Page head -->
+    <section class="container page-head tight head-band">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Say hello</span>
+        <h1>Get in touch</h1>
+        <p>Drop us a line, or just turn up and take a stool at the bar.</p>
+      </div>
+    </section>
+
+    <!-- ================================================== Details + form -->
+    <section class="container flush-top">
+      <div class="grid-2 contact-grid" style="align-items: start;">
+
+        <!-- Left: details + form -->
+        <div class="animate-on-scroll">
+          <span class="eyebrow">Details</span>
+          <h2 class="mb-4">How to reach us</h2>
+
+          <div class="info-row">
+            <span class="ico"><i class="ph-fill ph-map-pin"></i></span>
+            <div>
+              <h4>Address</h4>
+              <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="ico"><i class="ph-fill ph-phone"></i></span>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+11234567890" class="text-accent">(123) 456-7890</a></p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="ico"><i class="ph-fill ph-envelope-simple"></i></span>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@bitesandbeats.com" class="text-accent">hello@bitesandbeats.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-row" style="border-bottom: 0;">
+            <span class="ico"><i class="ph-fill ph-share-network"></i></span>
+            <div>
+              <h4>Follow us</h4>
+              <div class="social-row mt-2">
+                <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+                <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card flat contact-form-card mt-6">
+            <h3>Send a message</h3>
+            <p class="form-note mb-4">Parties of eight or more are easier to sort by phone.</p>
+
+            <form action="https://formspree.io/f/placeholder" method="POST" class="validate-form" novalidate>
+              <div class="res-form-grid">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" class="form-control" required placeholder="Jane Doe">
+                  <span class="error-message">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" class="form-control" required placeholder="jane@example.com">
+                  <span class="error-message">Please enter a valid email.</span>
+                </div>
+                <div class="form-group full-width">
+                  <label for="subject">What's it about?</label>
+                  <select id="subject" name="subject" class="form-control">
+                    <option>A general question</option>
+                    <option>A booking or large party</option>
+                    <option>Private hire and events</option>
+                    <option>Press or partnerships</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="message">Message *</label>
+                  <textarea id="message" name="message" class="form-control" rows="5" required placeholder="What's on your mind?"></textarea>
+                  <span class="error-message">Please enter a message.</span>
+                </div>
+              </div>
+
+              <div class="form-success-message">
+                <i class="ph-fill ph-check-circle"></i>
+                Message sent. We usually reply within a day.
+              </div>
+
+              <div class="form-actions mt-4">
+                <button type="submit" class="btn btn-primary">Send message <i class="ph ph-paper-plane-tilt"></i></button>
+                <span class="form-note">Fields marked * are required.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: map + hours -->
+        <div class="animate-on-scroll" style="transition-delay: 120ms;">
+          <span class="eyebrow">Find us</span>
+          <h2 class="mb-4">On the corner of Vibrant &amp; 6th</h2>
+
+          <div class="map-container">
+            <!-- OpenStreetMap needs no API key. To switch to Google Maps, open the
+                 location there, use Share > Embed a map, and paste its iframe src. -->
+            <iframe
+              title="Map showing the location of Bites &amp; Beats"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0071%2C40.7456%2C-73.9871%2C40.7556&amp;layer=mapnik&amp;marker=40.7506%2C-73.9971"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="map-link">
+            <a href="https://www.openstreetmap.org/?mlat=40.7506&amp;mlon=-73.9971#map=16/40.7506/-73.9971"
+              target="_blank" rel="noopener">Open in a larger map <i class="ph ph-arrow-up-right"></i></a>
+          </p>
+
+          <div class="card flat" style="padding: var(--space-4);">
+            <h3 class="mb-4">Opening hours</h3>
+            <div class="hours-row" data-days="1">
+              <span>Monday</span>
+              <span>Closed</span>
+            </div>
+            <div class="hours-row" data-days="2,3,4">
+              <span>Tuesday &ndash; Thursday</span>
+              <span>5:00 PM &ndash; 11:00 PM</span>
+            </div>
+            <div class="hours-row" data-days="5,6">
+              <span>Friday &ndash; Saturday</span>
+              <span>5:00 PM &ndash; 1:00 AM</span>
+            </div>
+            <div class="hours-row" data-days="0">
+              <span>Sunday</span>
+              <span>4:00 PM &ndash; 10:00 PM</span>
+            </div>
+
+            <p class="mt-4 text-muted" style="font-size: 0.86rem;">
+              Kitchen closes an hour before the bar. The pintxos counter never really does.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== CTA -->
+    <section class="cta-band">
+      <div class="container animate-on-scroll">
+        <span class="eyebrow centered" style="color: rgba(255,255,255,0.8);">Or skip the email</span>
+        <h2>Just book a table</h2>
+        <p class="mb-4" style="font-size: 1.15rem;">Thirty seconds, no phone call required.</p>
+        <a href="reservations.html" class="btn btn-light"><i class="ph ph-calendar-check"></i> Reserve now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

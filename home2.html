@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bites &amp; Beats | An Evening, Hour by Hour</title>
+  <meta name="description"
+    content="See how a night at Bites &amp; Beats unfolds, hour by hour — from golden-hour vermouth to the resident DJ's last set.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html" class="active">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html" class="active">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Split hero -->
+    <section class="split-hero">
+      <div class="split-hero-copy">
+        <span class="eyebrow animate-on-scroll">Tapas bar &middot; Night City</span>
+        <h1 class="reveal-words">Small plates.<br>Big energy.</h1>
+        <p class="lede mb-4 animate-on-scroll" style="transition-delay: 100ms;">
+          Live fire, cold sherry and a room that fills from the bar outwards. Every plate is made to be passed across
+          the table at least twice.
+        </p>
+        <div class="hero-actions animate-on-scroll" style="transition-delay: 200ms;">
+          <a href="menu.html" class="btn btn-primary">Discover the menu</a>
+          <a href="reservations.html" class="btn btn-outline">Book a table</a>
+        </div>
+
+        <div class="stat-row mt-6 animate-on-scroll" style="transition-delay: 300ms;">
+          <div class="stat">
+            <strong data-count="42">0</strong>
+            <span>Plates</span>
+          </div>
+          <div class="stat">
+            <strong data-count="9">0</strong>
+            <span>Hours a night</span>
+          </div>
+          <div class="stat">
+            <strong data-count="4" data-suffix=".9">0</strong>
+            <span>Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-hero-media">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1200"
+          alt="The bar at Bites &amp; Beats">
+        <div class="floating-quote">
+          <div class="avatar"><i class="ph-fill ph-star"></i></div>
+          <div>
+            <p>&ldquo;Best vibe in the city&rdquo;</p>
+            <span>&mdash; Local Times</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Live fire <i class="ph-fill ph-circle"></i> Sherry on tap <i class="ph-fill ph-circle"></i> Resident DJs
+          <i class="ph-fill ph-circle"></i> Late kitchen <i class="ph-fill ph-circle"></i> No corkage Tuesdays <i
+            class="ph-fill ph-circle"></i></span>
+      </div>
+    </div>
+
+    <!-- ================================================== INTERACTIVE: Night dial -->
+    <section class="container" id="night-dial">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Interactive</span>
+        <h2>One night, hour by hour</h2>
+        <p>Drag the dial or pick an hour. We'll tell you exactly what the room feels like, what's coming out of the
+          kitchen and whether you'll need a reservation.</p>
+      </div>
+
+      <div class="module-panel animate-on-scroll">
+        <div class="night-stage">
+
+          <!-- Visual -->
+          <div class="night-visual">
+            <img data-key="golden" class="active" src="assets/images/night-golden-hour.jpg"
+              alt="Early evening at the bar" loading="lazy">
+            <img data-key="dinner" src="assets/images/night-dinner-peak.jpg" alt="The dining room at peak service"
+              loading="lazy">
+            <img data-key="bar" src="assets/images/night-bar-cocktails.jpg" alt="Cocktails going out across the bar"
+              loading="lazy">
+            <img data-key="late" src="assets/images/night-late-crowd.jpg" alt="The room late at night" loading="lazy">
+            <img data-key="closing" src="assets/images/night-closing.jpg"
+              alt="The bar quiet at closing, glasses cleared and lights up" loading="lazy">
+            <div class="night-clock" id="night-clock">8:00<small>PM</small></div>
+          </div>
+
+          <!-- Readout -->
+          <div class="night-info" aria-live="polite">
+            <span class="night-badge" id="night-badge"><span class="pulse"></span>Peak</span>
+            <h3 id="night-title">The loud, good hour</h3>
+            <p class="desc" id="night-desc">Our busiest seating.</p>
+
+            <div class="night-facts">
+              <div class="night-fact">
+                <span class="ico"><i class="ph ph-music-notes"></i></span>
+                <span>
+                  <span class="k">On the speakers</span>
+                  <span class="v" id="night-music">Latin house</span>
+                </span>
+              </div>
+              <div class="night-fact">
+                <span class="ico"><i class="ph ph-cooking-pot"></i></span>
+                <span>
+                  <span class="k">Out of the kitchen</span>
+                  <span class="v" id="night-kitchen">Full menu</span>
+                </span>
+              </div>
+              <div class="night-fact">
+                <span class="ico"><i class="ph ph-armchair"></i></span>
+                <span>
+                  <span class="k">Getting a seat</span>
+                  <span class="v" id="night-seat">Book ahead</span>
+                </span>
+              </div>
+              <div class="night-fact">
+                <span class="ico"><i class="ph ph-users-three"></i></span>
+                <span style="flex: 1; min-width: 0;">
+                  <span class="k">How full it feels</span>
+                  <span class="night-crowd">
+                    <span class="meter" id="night-crowd"><i></i></span>
+                    <span class="val" id="night-crowd-val">Packed</span>
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <a href="reservations.html" class="btn btn-primary btn-sm"><i class="ph ph-calendar-check"></i> Book this
+                slot</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Control -->
+        <div class="night-control">
+          <input type="range" class="range" id="night-range" min="0" max="4" step="1" value="2"
+            aria-label="Pick an hour of the evening">
+          <div class="night-ticks">
+            <button type="button" class="night-tick">5PM</button>
+            <button type="button" class="night-tick">7PM</button>
+            <button type="button" class="night-tick active">9PM</button>
+            <button type="button" class="night-tick">11PM</button>
+            <button type="button" class="night-tick">1AM</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== Crowd favourites -->
+    <section class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Crowd favourites</span>
+        <h2>The plates everyone talks about</h2>
+        <p>Ordered more than anything else on the menu, three nights out of four.</p>
+      </div>
+
+      <div class="grid-3 animate-on-scroll" data-stagger>
+        <article class="dish-card">
+          <div class="dish-card-media">
+            <img src="https://images.unsplash.com/photo-1535980156496-87fc2cfcb832?auto=format&fit=crop&q=80&w=700"
+              alt="Charred octopus with potatoes" loading="lazy" style="object-position: center bottom;">
+            <span class="price-chip">$22</span>
+          </div>
+          <div class="dish-card-body">
+            <h3>Charred Octopus</h3>
+            <p>Smoked paprika, crushed potatoes, a lot of lemon.</p>
+            <div class="dietary-tags"><span class="tag gf">GF</span><span class="tag chef">Chef's pick</span></div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-card-media">
+            <img src="assets/images/iberico-jamon.jpg" alt="Hand-carved slices of Ibérico jamón" loading="lazy">
+            <span class="price-chip">$28</span>
+          </div>
+          <div class="dish-card-body">
+            <h3>Ib&eacute;rico Jam&oacute;n</h3>
+            <p>Aged 36 months, carved to order, tomato bread alongside.</p>
+            <div class="dietary-tags"><span class="tag chef">Chef's pick</span></div>
+          </div>
+        </article>
+        <article class="dish-card">
+          <div class="dish-card-media">
+            <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&q=80&w=700"
+              alt="Sangria being poured over ice and orange" loading="lazy">
+            <span class="price-chip">$14</span>
+          </div>
+          <div class="dish-card-body">
+            <h3>Signature Sangria</h3>
+            <p>Tempranillo, brandy, whatever fruit is best that week.</p>
+            <div class="dietary-tags"><span class="tag v">V</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-6 animate-on-scroll">
+        <a href="menu.html" class="btn btn-outline">See the full menu <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- ================================================== Behind the bar -->
+    <section class="container tight">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Behind the bar</span>
+        <h2>Order a drink while you decide</h2>
+        <p>Three things we pour more than anything else, all night, from the moment the doors open.</p>
+      </div>
+
+      <div class="grid-3 animate-on-scroll" data-stagger>
+        <article class="pour-card">
+          <img src="https://images.unsplash.com/photo-1603048004570-6a82fc507364?auto=format&fit=crop&q=80&w=700"
+            alt="Vermouth over ice with an orange wheel" loading="lazy">
+          <div class="pour-card-body">
+            <h3>Vermut de Grifo</h3>
+            <p>Red vermouth straight from the tap, over ice, with an orange wheel.</p>
+            <div class="pour-meta">
+              <i class="ph ph-drop"></i> On tap <span class="amount">$9</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pour-card">
+          <img src="https://images.unsplash.com/photo-1550591683-18e1e4a4b9fa?auto=format&fit=crop&q=80&w=700"
+            alt="Sherry cobbler over crushed ice with citrus" loading="lazy">
+          <div class="pour-card-body">
+            <h3>Sherry Cobbler</h3>
+            <p>Amontillado, crushed ice and whatever citrus is sharpest that morning.</p>
+            <div class="pour-meta">
+              <i class="ph ph-martini"></i> Shaken <span class="amount">$13</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pour-card">
+          <img src="https://images.unsplash.com/photo-1707313835513-6f44e631ffc0?auto=format&fit=crop&q=80&w=700"
+            alt="Red wine being poured at a candlelit table" loading="lazy">
+          <div class="pour-card-body">
+            <h3>Rioja by the Glass</h3>
+            <p>Four growers on rotation. Ask what's open &mdash; the answer changes.</p>
+            <div class="pour-meta">
+              <i class="ph ph-wine"></i> By the glass <span class="amount">$11</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================================================== Night band -->
+    <section class="band-dark grain">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="eyebrow centered">After nine</span>
+          <h2>The night is young</h2>
+          <p>Resident DJs from Thursday, a cocktail list that runs deep, and a kitchen that keeps firing until midnight.
+          </p>
+        </div>
+
+        <div class="grid-3 animate-on-scroll" data-stagger>
+          <article class="glass-panel quote-card">
+            <span class="mark">&ldquo;</span>
+            <blockquote>The perfect place to start the night. The energy is unmatched.</blockquote>
+            <div class="quote-author">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+                alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+              <cite>Sarah M.</cite>
+            </div>
+          </article>
+          <article class="glass-panel quote-card">
+            <span class="mark">&ldquo;</span>
+            <blockquote>Those mushroom pintxos changed my life entirely. Book early.</blockquote>
+            <div class="quote-author">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+                alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+              <cite>David K.</cite>
+            </div>
+          </article>
+          <article class="glass-panel quote-card">
+            <span class="mark">&ldquo;</span>
+            <blockquote>Came for one drink at seven. Left at one in the morning. No regrets.</blockquote>
+            <div class="quote-author">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&crop=faces&q=80&w=160&h=160"
+                alt="" class="quote-avatar" loading="lazy" width="48" height="48">
+              <cite>Priya N.</cite>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== CTA -->
+    <section class="container">
+      <div class="card static text-center animate-on-scroll"
+        style="align-items: center; padding: clamp(2rem, 5vw, 4rem);">
+        <span class="eyebrow centered">Your table</span>
+        <h2 class="mb-2">Book it before Friday does</h2>
+        <p class="lede mb-4" style="margin-inline: auto;">Weekends fill about a week out. Midweek, walk in and take the
+          bar.</p>
+        <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events &amp; Private Dining | Bites &amp; Beats</title>
+  <meta name="description"
+    content="Three private spaces, three tapas packages and an instant budget estimate. Plan your party at Bites &amp; Beats.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/interactive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+  <div class="scroll-progress"></div>
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+      <button class="icon-btn close-drawer" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-toggles">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="menu.html">Menu</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-actions">
+      <a href="reservations.html" class="btn btn-primary"><i class="ph ph-calendar-check"></i> Reserve a Table</a>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-martini"></i> Bites &amp; Beats
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== Page head -->
+    <section class="container page-head tight head-band">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Private dining</span>
+        <h1>Events &amp; Private Dining</h1>
+        <p>Take a corner, a room or the whole building. We'll handle the fire, the sound and the sangria.</p>
+      </div>
+    </section>
+
+    <!-- ================================================== The spaces -->
+    <section class="band-dark grain">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="eyebrow centered">Three rooms</span>
+          <h2>The spaces</h2>
+          <p>Each one comes with its own service team. The Vault and the buyout come with the DJ booth too.</p>
+        </div>
+
+        <div class="grid-3 animate-on-scroll" data-stagger>
+          <article class="glass-panel space-card">
+            <div class="space-card-media">
+              <img src="assets/images/mezzanine-seating.jpg" alt="Velvet seating under warm neon on the mezzanine"
+                loading="lazy">
+            </div>
+            <div class="space-card-body">
+              <h3 class="text-gold mb-2">The Mezzanine</h3>
+              <p>Semi-private, overlooking the main bar. Best for mixers where people move around.</p>
+              <p class="space-capacity">12&ndash;30 guests</p>
+            </div>
+          </article>
+          <article class="glass-panel space-card">
+            <div class="space-card-media">
+              <img src="assets/images/vault-private-dining.jpg"
+                alt="A long table laid with glassware and candles in the private room" loading="lazy">
+            </div>
+            <div class="space-card-body">
+              <h3 class="text-gold mb-2">The Vault</h3>
+              <p>Fully private dining room, its own sound system, door you can close.</p>
+              <p class="space-capacity">8&ndash;18 guests seated</p>
+            </div>
+          </article>
+          <article class="glass-panel space-card">
+            <div class="space-card-media">
+              <img src="assets/images/full-buyout-dj.jpg" alt="A packed room under red lights during a DJ set"
+                loading="lazy">
+            </div>
+            <div class="space-card-body">
+              <h3 class="text-gold mb-2">Full Buyout</h3>
+              <p>The entire venue. DJs, open bar, passed tapas, nobody asking you to leave.</p>
+              <p class="space-capacity">60&ndash;120 guests</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== INTERACTIVE: Planner -->
+    <section class="container" id="event-planner">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Interactive</span>
+        <h2>Plan it and price it</h2>
+        <p>Pick a room, a package and however many people you're feeding. The estimate updates as you go &mdash; then
+          drops itself into the inquiry form.</p>
+      </div>
+
+      <div class="planner animate-on-scroll">
+
+        <!-- Choices -->
+        <div>
+          <!-- Step 1 -->
+          <div class="planner-step">
+            <div class="step-head">
+              <span class="num">1</span>
+              <h4>Choose your room</h4>
+            </div>
+            <div class="option-grid">
+              <label class="option-card">
+                <input type="radio" name="space" value="mezzanine" checked>
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">The Mezzanine</span>
+                <span class="d">Semi-private, above the bar. Made for mingling.</span>
+                <span class="p">12&ndash;30 guests &middot; $500 room fee</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="space" value="vault">
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">The Vault</span>
+                <span class="d">Fully private, seated, own sound system.</span>
+                <span class="p">8&ndash;18 guests &middot; $750 room fee</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="space" value="buyout">
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Full Buyout</span>
+                <span class="d">The whole venue, all night, entirely yours.</span>
+                <span class="p">60&ndash;120 guests &middot; $3,500 venue fee</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="planner-step">
+            <div class="step-head">
+              <span class="num">2</span>
+              <h4>How many guests</h4>
+            </div>
+            <div class="card static flat" style="padding: var(--space-3);">
+              <div class="guest-readout">
+                <span class="big" id="planner-guests-out">24</span>
+                <span class="note" id="planner-guests-note">A proper party</span>
+              </div>
+              <input type="range" class="range" id="planner-guests" min="8" max="120" step="2" value="24"
+                aria-label="Number of guests">
+              <div class="range-scale">
+                <span>8</span>
+                <span>60</span>
+                <span>120</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="planner-step">
+            <div class="step-head">
+              <span class="num">3</span>
+              <h4>Pick a food package</h4>
+            </div>
+            <div class="option-grid">
+              <label class="option-card">
+                <input type="radio" name="package" value="pintxos">
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Pintxos Hour</span>
+                <span class="d">Six passed bites, one welcome drink. Ninety minutes.</span>
+                <span class="p">$55 per guest</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="package" value="feast" checked>
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Tapas Feast</span>
+                <span class="d">Ten plates to the table, family style, plus dessert.</span>
+                <span class="p">$85 per guest</span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="package" value="chefs">
+                <span class="check"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Chef's Table</span>
+                <span class="d">Fourteen courses, jam&oacute;n carved at the table, paired sherries.</span>
+                <span class="p">$120 per guest</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="planner-step">
+            <div class="step-head">
+              <span class="num">4</span>
+              <h4>Add the extras</h4>
+            </div>
+            <div class="addon-list">
+              <label class="addon">
+                <input type="checkbox" name="addon" data-name="Resident DJ" data-price="450" data-unit="flat">
+                <span class="box"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Resident DJ<small>Four-hour set, our booth, your playlist notes</small></span>
+                <span class="p">$450</span>
+              </label>
+              <label class="addon">
+                <input type="checkbox" name="addon" data-name="Open bar" data-price="40" data-unit="guest">
+                <span class="box"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Open bar<small>Three hours, house spirits, wine and beer</small></span>
+                <span class="p">$40 / guest</span>
+              </label>
+              <label class="addon">
+                <input type="checkbox" name="addon" data-name="Sangria welcome" data-price="12" data-unit="guest">
+                <span class="box"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Sangria welcome<small>A glass in everyone's hand as they walk in</small></span>
+                <span class="p">$12 / guest</span>
+              </label>
+              <label class="addon">
+                <input type="checkbox" name="addon" data-name="Celebration cake" data-price="95" data-unit="flat">
+                <span class="box"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Celebration cake<small>Basque cheesecake, candles, the whole performance</small></span>
+                <span class="p">$95</span>
+              </label>
+              <label class="addon">
+                <input type="checkbox" name="addon" data-name="Floral styling" data-price="280" data-unit="flat">
+                <span class="box"><i class="ph-bold ph-check"></i></span>
+                <span class="t">Floral styling<small>Table runners and low arrangements by our florist</small></span>
+                <span class="p">$280</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estimate -->
+        <aside class="estimate" aria-live="polite">
+          <h3>Your estimate</h3>
+          <p class="sub">Updates as you choose</p>
+
+          <div class="estimate-warn" id="planner-warn"></div>
+
+          <ul class="estimate-lines" id="planner-lines"></ul>
+
+          <div class="estimate-total">
+            <div>
+              <span class="k">Estimated total</span>
+              <div class="v" id="planner-total">$0</div>
+            </div>
+            <div class="per" id="planner-per">&mdash;</div>
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block" id="planner-apply">
+            <i class="ph ph-arrow-down"></i> Send this to the form
+          </button>
+
+          <p class="fineprint">Indicative only. Final quotes depend on date, season and how late you want the bar open.
+            Tax not included.</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ================================================== Inquiry form -->
+    <section class="container" id="inquiry">
+      <div class="section-header animate-on-scroll">
+        <span class="eyebrow centered">Next step</span>
+        <h2>Tell us about your night</h2>
+        <p>Our events coordinator replies within one working day, usually sooner.</p>
+      </div>
+
+      <div class="card static animate-on-scroll" style="max-width: 860px; margin: 0 auto;">
+        <form action="https://formspree.io/f/placeholder" method="POST" class="validate-form" novalidate>
+          <div class="res-form-grid">
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Jane Doe">
+              <span class="error-message">Please enter your name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="jane@example.com">
+              <span class="error-message">Please enter a valid email.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="(123) 456-7890">
+              <span class="error-message">Please enter a valid phone number.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="eventType">Event Type *</label>
+              <select id="eventType" name="eventType" class="form-control" required>
+                <option value="" disabled selected>Select event type</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Corporate">Corporate event</option>
+                <option value="Wedding Reception">Wedding reception</option>
+                <option value="Other">Something else</option>
+              </select>
+              <span class="error-message">Please select an event type.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Estimated Guests *</label>
+              <input type="number" id="guests" name="guests" class="form-control" min="8" required
+                placeholder="e.g. 24">
+              <span class="error-message">Please enter a guest count of 8 or more.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date" name="date" class="form-control" required>
+              <span class="error-message">Please select a date.</span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Details *</label>
+              <textarea id="message" name="message" class="form-control" rows="6" required
+                placeholder="Room, package, anything we should know&hellip;"></textarea>
+              <span class="error-message">Please give us a few details.</span>
+            </div>
+
+          </div>
+
+          <div class="form-success-message">
+            <i class="ph-fill ph-check-circle"></i>
+            Inquiry sent. Our events coordinator will be in touch within one working day.
+          </div>
+
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary">Submit inquiry <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo"><i class="ph-fill ph-martini"></i> Bites &amp; Beats</a>
+          <p>Spanish small plates, live fire and late sets. Seven nights a week, minus Mondays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">The Menu</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="events.html">Private Dining</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <p>123 Vibrant Avenue<br>Night City, NY 10001</p>
+          <p class="mt-2"><a href="tel:+11234567890">(123) 456-7890</a></p>
+          <p class="mt-2">Tue&ndash;Sun &middot; 5PM&ndash;Late</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bites &amp; Beats. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
